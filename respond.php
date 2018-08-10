@@ -6,7 +6,7 @@ use \Rapd\Environment;
 
 # Generate a response based on the request and the configured routes
 $uri = $_SERVER["REQUEST_URI"];
-$path = preg_replace("`^/".Environment::get("ASSET_BASE")."/`", "/", $uri);
+$path = preg_replace("`^".Environment::get("ASSET_BASE")."/`", "/", $uri);
 $path = preg_replace("`\?.*\$`", "", $path);
 $matchedRoute = Router::match($path);
 
