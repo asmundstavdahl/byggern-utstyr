@@ -10,7 +10,7 @@ Database::$pdo = new PDO("sqlite:{$dbFile}");
 use \Rapd\Environment;
 
 # For JS, CSS, images etc.: (ASSET_BASE)/css/app.css
-Environment::set("ASSET_BASE", "");
+Environment::set("ASSET_BASE", "/byggern-utstyr");
 
 Environment::set("TITLE", "byggern-utstyr");
 Environment::set("AUTHOR", "Åsmund Stavdahl");
