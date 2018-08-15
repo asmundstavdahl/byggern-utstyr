@@ -1,16 +1,15 @@
 
 window.addEventListener("load", e => {
-	let firstInput = document.querySelector("input[type=text]")
-	if(firstInput){
-		firstInput.focus()
-	}
-
-	/*document.body.addEventListener("keyup", e => {
+	document.body.addEventListener("keyup", e => {
 		let inInput = e.target.tagName == "INPUT"
 
 		switch(e.key){
 			case "Escape":
-				location.pathname = location.pathname.replace(/\/[^/]*$/, "")
+				let firstInput = document.querySelector("input[type=text]")
+				if(firstInput){
+					firstInput.focus()
+				}
+				//location.pathname = location.pathname.replace(/\/[^/]*$/, "")
 				break
 			case "ArrowLeft":
 			case "ArrowRight":
@@ -28,5 +27,5 @@ window.addEventListener("load", e => {
 
 				location.pathname = location.pathname.replace(/\/[^/]*$/, "/" + id)
 		}
-	})*/
+	})
 })
