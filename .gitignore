@@ -2,3 +2,5 @@ composer.phar
 /vendor/
 
 *.sqlite3*
+
+.htpasswd
