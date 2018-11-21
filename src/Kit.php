@@ -15,6 +15,12 @@ class Kit extends Entity {
 		return Note::findAllWhere("kit_id = :id", [":id" => $this->id]);
 	}
 
+	function hasNonOkNote() : bool {
+		return array_reduce($this->getNotes(), function($acc, $note){
+			return $acc || !$note->ok;
+		}, false);
+	}
+
 	function describeNotes()
 	{
 		return array_reduce($this->getNotes(), function($acc, $note){
