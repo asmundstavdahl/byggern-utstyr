@@ -14,4 +14,15 @@ class Kit extends Entity {
 	function getNotes() : array {
 		return Note::findAllWhere("kit_id = :id", [":id" => $this->id]);
 	}
+
+	function describeNotes()
+	{
+		return array_reduce($this->getNotes(), function($acc, $note){
+			if ($note->ok) {
+				return $acc;
+			} else {
+				return $acc . " · {$note->body}\n";
+			}
+		}, "");
+	}
 }

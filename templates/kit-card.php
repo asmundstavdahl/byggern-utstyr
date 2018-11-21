@@ -1,5 +1,5 @@
 
-<div class="kit card" id="kit-<?= $kit->id ?>">
+<div class="kit card" id="kit-<?= $kit->id ?>" title="<?= $kit->describeNotes() ?>">
 
 	<h3>
 		<a href="<?= route("show_kit", [$kit->id]) ?>">
