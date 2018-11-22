@@ -20,7 +20,7 @@ if ($kit->ready_next) {
 
 ?>
 
-<div class="kit card <?= $extraClasses ?>" id="kit-<?= $kit->id ?>" title="<?= $kit->describeNotes() ?>">
+<div class="kit card <?= $extraClasses ?>" id="kit-<?= $kit->id ?>" title="<?= e($kit->describeNotes()) ?>">
 
 	<h3>
 		<a href="<?= route("show_kit", [$kit->id]) ?>">
