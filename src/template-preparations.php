@@ -10,3 +10,7 @@ function route(string $name, array $data = []){
 function render(string $name, array $data = []){
 	return View::render($name, $data);
 }
+
+function e(string $str){
+	return htmlspecialchars($str);
+}
