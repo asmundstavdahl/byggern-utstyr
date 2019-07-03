@@ -12,6 +12,7 @@ Router::add(new Route(
 		$note = new Note();
 		$note->kit_id = $kitId;
 		$note->patch($_REQUEST);
+		$note->timestamp = date("Y-m-d H:i:s");
 		$note->insert();
 
 		return Router::redirectTo("show_kit", [$note->kit_id]);

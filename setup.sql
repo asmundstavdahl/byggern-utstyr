@@ -13,5 +13,5 @@ CREATE TABLE IF NOT EXISTS note (
 	, kit_id INTEGER NOT NULL
 	, body TEXT NOT NULL
 	, ok INTEGER NOT NULL DEFAULT 0
-	, timestamp DATE DEFAULT (datetime('now','localtime'))
+	, timestamp DATE
 );
