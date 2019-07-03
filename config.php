@@ -27,7 +27,7 @@ use \Rapd\Environment;
 # For JS, CSS, images etc.: (ASSET_BASE)/css/app.css
 Environment::set("ASSET_BASE", "");
 
-Environment::set("TITLE", "byggern-utstyr");
+Environment::set("TITLE", "/byggern-utstyr");
 Environment::set("AUTHOR", "Åsmund Stavdahl");
 Environment::set("DESCRIPTION", "Hold oversikt over Bygger'n-utstyr");
 
