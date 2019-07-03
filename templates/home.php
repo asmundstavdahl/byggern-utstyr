@@ -1,6 +1,6 @@
 <?= render("header") ?>
 
-<h1>Bygger'n - utstyrssett</h1>
+<h1>Bygger'n - utstyrssett <?= render("year-selector") ?></h1>
 
 <div class="flex row">
 	<?php foreach($kits as $kit): ?>
