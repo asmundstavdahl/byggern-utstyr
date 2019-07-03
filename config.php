@@ -1,9 +1,24 @@
 <?php
 
+session_start();
+
+if (key_exists("year", $_GET)) {
+	$_SESSION["year"] = $_GET["year"];
+}
+
+if (!key_exists("year", $_SESSION) || !intval($_SESSION["year"])) {
+	$_SESSION["year"] = date("Y");
+}
 
 use \Rapd\Database;
 
-$dbFile = __DIR__."/app.sqlite3";
+$dbFileBase = __DIR__."/app.sqlite3";
+$dbFile = "{$dbFileBase}.{$_SESSION["year"]}";
+
+if (!file_exists($dbFile) || !file_get_contents($dbFile)) {
+	shell_exec("bash ".__DIR__."/prepare-db-for-new-year.sh");
+}
+
 Database::$pdo = new PDO("sqlite:{$dbFile}");
 
 
