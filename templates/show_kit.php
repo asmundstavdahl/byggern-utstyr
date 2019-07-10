@@ -3,6 +3,7 @@
 <h1>
 	<a class="button" href="<?= route("home") ?>">&uarr;</a>
 	Utstyrssett #<?= $kit->id ?>
+	<?= render("year-selector") ?>
 </h1>
 
 <a class="button" href="<?= route("show_kit", [$kit->id - 1]) ?>">&larr;</a>
